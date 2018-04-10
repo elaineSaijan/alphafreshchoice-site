@@ -12,7 +12,7 @@ background-size: cover;
 background-repeat: no-repeat;
 width: auto;
 height: auto;
-color:#000000;
+color:#ef0a02;
 background-color: #FFFFFF;
 font-family: Verdana, Arial, Helvetica, sans-serif;
 margin: 0;
@@ -20,7 +20,7 @@ margin: 0;
 
 header 
 {
-background-color:#000000; 
+background-color:#4CAF50; 
 color:#FFFFFF;
 font-family: Georgia, Times New Roman, serif;
 text-align: center;
@@ -38,7 +38,7 @@ background-repeat:no-repeat;
 
 nav 
 {
-background-color:#000000;
+background-color:#CDDC39;
 font-weight:bold;
 padding:5px;
 text-align: center;
@@ -57,7 +57,7 @@ color: #FFFFFF;
 
 #nav a:visited 
 {
-color: #000033;
+color: #4CAF50;
 }
 
 #nav a:hover 
@@ -89,7 +89,7 @@ margin-left: 35px;
 
 h2 
 {
-color:#9F674B;
+color:#FFEB3B;
 font-family:Georgia, Times New Roman, serif;
 text-align: center;
 }
@@ -125,7 +125,7 @@ border-collapse:collapse;
 }
 tr
 {
-background-color: #000000;
+background-color: #4CAF50;
 color:#FFFFFF;
 }
 
@@ -152,13 +152,13 @@ color:#FFFFFF;
 
 dt
 {
-color:#000033;
+color:#2E7D32;
 font-weight:bold;
 }
 
 .column1
 {
-background-color:#000002;
+background-color:#4CAF50;
 float: left;
 width: 33%;
 text-align:center;
@@ -168,7 +168,7 @@ margin-top: 2em;
 
 .column2
 {
-background-color:#000002;
+background-color:#4CAF50;
 display:inline-block;
 width: 33%;
 text-align:center;
@@ -178,7 +178,7 @@ margin-top: 2em;
 
 .column3
 {
-background-color:#000002;
+background-color:#4CAF50;
 float: right;
 width: 33.33%;
 text-align:center;
@@ -207,7 +207,7 @@ background-repeat:no-repeat;
 
 #menu 
 {
-background-color:#000000;
+background-color:#4CAF50;
 height:auto;
 margin:0px;
 width:auto;
@@ -215,7 +215,7 @@ width:auto;
 
 #location 
 {
-background-color:#000000;
+background-color:#4CAF50;
 height:auto;
 margin:0px;
 width:auto;
@@ -223,7 +223,7 @@ width:auto;
 
 #about
 {
-background-color: #000000;
+background-color: #4CAF50;
 height: auto;
 margin:0px;
 width:auto;
@@ -232,7 +232,7 @@ margin-bottom: 4em;
 
 #feed
 {
-background-color:#000000;
+background-color:#4CAF50;
 height:auto;
 margin:0px;
 width:auto;
@@ -240,7 +240,7 @@ width:auto;
 
 #career
 {
-background-color:#000000;
+background-color:#4CAF50;
 height:auto;
 margin:0px;
 width:auto;
@@ -248,7 +248,7 @@ width:auto;
 
 #cater
 {
-background-color:#000000;
+background-color:#4CAF50;
 height:auto;
 margin:0px;
 width:auto;
@@ -265,7 +265,7 @@ padding:10px;
 
 #wrapper 
 {
-background-color:#000000;
+background-color:#4CAF50;
 background-position: center;
 background-size: cover;
 width: 90%;
@@ -282,7 +282,7 @@ header,nav,main,footer{display:block;}
 #mobile {display: none;}
 #desktop {display: inline;}
 
-form{ background-color: #281E0E; font-family: Georgia, Times New Roman, serif; padding: 10px;}
+form{ background-color: #F44336; font-family: Georgia, Times New Roman, serif; padding: 10px;}
 label{float: left; clear:left; padding-right:10px; width:100px; color: #FFFFFF; text-align:right; margin-top:10px;}
 input{display:block; margin-top:10px;}
 textarea{display:block; margin-top:10px; }
@@ -310,10 +310,10 @@ textarea{display:block; margin-top:10px; }
 	.column3{ width: 100%;}	
 	.aboutusco2 {width: 100%;}
 	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
-	#location { background:#000000; height:auto; margin:0px; width:auto; }
-	#about { background: #000000; height: auto; margin:0px; width:auto; }
-	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
-	#career { background-color:#000000; height:auto; margin:0px; width:auto; }
+	#location { background:#f90606; height:auto; margin:0px; width:auto; }
+	#about { background: #f10404; height: auto; margin:0px; width:auto; }
+	#feed { background-color:#F44336; height:auto; margin:0px; width:auto; }
+	#career { background-color:#F44336; height:auto; margin:0px; width:auto; }
 }
 
 @media only screen and (max-width:1024px) 
@@ -332,7 +332,7 @@ textarea{display:block; margin-top:10px; }
 	.column3{ width: 100%;}
 	.aboutusco2 {width: 100%;}
 	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
-	#location { background:#000000; height:auto; margin:0px; width:auto; } 
+	#location { background:#F44336; height:auto; margin:0px; width:auto; } 
 	#about { background: #000000; height: auto; margin:0px; width:auto;}
 	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
 	#career { background-color:#000000; height:auto; margin:0px; width:auto; }
