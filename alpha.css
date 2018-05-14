@@ -240,12 +240,18 @@ border-color: white;
 
 #home
 {
-background:url(giphy.gif);
-background-position: 0px 0px, 10px 10px;
-background-size: cover;
-height:600px;
-background-size:100% 100%;
-background-repeat:no-repeat;
+background-color:#000000;
+height:auto;
+margin:0px;
+width:auto;
+}
+
+.mySlides
+{
+	margin: auto;
+	width: 1000px;
+	height: 600px;
+	
 }
 
 #menu 
@@ -350,16 +356,17 @@ textarea{display:block; margin-top:10px; }
 	table{ width:auto; margin:auto; border:3px solid #FFFFFF; border-collapse:collapse; }
 	.column1{ width: 100%;}
 	.column2{ width: 100%;}
-	.column3{ width: 100%;}
+	.column3{ width: 100%;}	
 	.column4{ width: 100%; margin: auto;}
 	.column5{ width: 100%;margin: auto;}
 	.column6{ width: 100%;margin: auto;}
 	.aboutusco2 {width: 100%;}
-	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
-	#location { background:#f90606; height:auto; margin:0px; width:auto; }
-	#about { background: #f10404; height: auto; margin:0px; width:auto; }
-	#feed { background-color:#F44336; height:auto; margin:0px; width:auto; }
-	#career { background-color:#F44336; height:auto; margin:0px; width:auto; }
+	.mySlides{ height:100%; width: 100%} 
+	#home {height:50px; margin-left:0px;}	
+	#location { background:#000000; height:auto; margin:0px; width:auto; }
+	#about { background: #000000; height: auto; margin:0px; width:auto; }
+	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
+	#career { background-color:#000000; height:auto; margin:0px; width:auto; }
 }
 
 @media only screen and (max-width:1024px) 
@@ -380,8 +387,9 @@ textarea{display:block; margin-top:10px; }
 	.column5{ width: 100%;margin: auto;}
 	.column6{ width: 100%;margin: auto;}
 	.aboutusco2 {width: 100%;}
-	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
-	#location { background:#F44336; height:auto; margin:0px; width:auto; } 
+	.mySlides{ height:100%; width: 100%} 
+	#home {height:50px; margin-left:0px;}
+	#location { background:#000000; height:auto; margin:0px; width:auto; } 
 	#about { background: #000000; height: auto; margin:0px; width:auto;}
 	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
 	#career { background-color:#000000; height:auto; margin:0px; width:auto; }
@@ -398,11 +406,12 @@ textarea{display:block; margin-top:10px; }
 	.column1{ width: 100%;}
 	.column2{ width: 100%;}
 	.column3{ width: 100%;}
-	.column4{ width: 100%; margin: auto;}
+	.column4{ width: 100%;margin: auto;}
 	.column5{ width: 100%;margin: auto;}
 	.column6{ width: 100%;margin: auto;}
 	.aboutusco2 {width: 100%; }
-	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
+	.mySlides{ height:100%; width: 100%} 
+	#home {height:50px; margin-left:0px;}
 	#location { background:#000000; height:auto; margin:0px; width:auto; }
 	#about { background: #000000; height: 60em; margin:0px; width:auto;}
 	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
@@ -426,14 +435,13 @@ textarea{display:block; margin-top:10px; }
 	p{color:#000000;}
 	.text{color:#000000;}
 	#wrapper { width: auto; border: 0; margin: 0 5%; padding: 0; float: none;}
-	#home {height:350px; background:url(giphy.gif); background-size: 100% 100%; margin-left:0px; background-repeat:no-repeat;}
+	.mySlides{ height:100%; width: 100%} 
+	#home {height:50px; margin-left:0px;}
 	#location { background:#000000; height:auto; margin:0px; width:auto; }
 	#about { background: #000000; height: auto; margin:0px; width:auto;}
 	#feed { background-color:#000000; height:auto; margin:0px; width:auto; }
 	#career { background-color:#000000; height:auto; margin:0px; width:auto; }
 	
 }
-
-
 </style>
 </html>
