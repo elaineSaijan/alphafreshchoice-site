@@ -37,16 +37,43 @@
 <a href="catering.html">Catering</a>
 </nav>
 
-
 <div id="home">
+<h2> Welcome to Alpha Fresh Choice Cafe! </h2>
 </div>
-
+<img class="mySlides" src="LOGO.jpg">
+  <img class="mySlides" src="bdf.jpg">
+  <img class="mySlides" src="biri.jpg">
+  <img class="mySlides" src="chees.jpg">
+  <img class="mySlides" src="Chil.jpg">
+  <img class="mySlides" src="LOGO.jpg">
+  <img class="mySlides" src="Devi.jpg">
+  <img class="mySlides" src="kabob.jpg">
+  <img class="mySlides" src="Palap.jpg">
+  <img class="mySlides" src="sal.jpg">
+  <img class="mySlides" src="LOGO.jpg">
+  <img class="mySlides" src="shawar.jpg">
+  <img class="mySlides" src="wing.jpg">
 
 <main>
-<h2> Welcome to Alpha Fresh Choice Cafe! </h2>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
 </main>
-
-
 </body>
 
 <footer>
@@ -57,5 +84,3 @@ Copyright &copy; 2017 Alpha Fresh Choice Inc.
 </div>
 
 </html>
-
-
