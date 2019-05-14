@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<title>Alpha Fresh Choices Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+* {box-sizing: border-box}
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #541414;
+  width: 20%;
+  height: 285px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #541414;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #616161;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 5px solid #ccc;
+  width: 80%;
+  height: 600px;
+  overflow: auto;
+
+}
+.bgimg {
+  background-position: center;
+  background-size: 88% 100%;
+  background-repeat: no-repeat;
+  background-image: url("C:/Users/malus/Desktop/19Alpha/images/alpha1.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.marron{
+  background-color:#541414!important;	
+}
+
+.brown{
+  background-color:#132114!important;	
+}
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#catering" class="w3-button w3-block w3-black">CATERING</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container brown" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 7:30am to 4pm, Monday-Friday</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-large marron">
+
+<!-- About Container -->
+<div class="w3-container w3-text-white" id="about">
+  <div class="w3-content" style="max-width:700px">
+<br>
+<br>
+<br>
+<br>
+    <h5 class="w3-center"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>At Alpha Fresh Choice Cafe and Deli, you can experience a deli that features delicious sandwiches and good subs in a familiar ambience. It's a culinary destination for visitors that want delicious food. Try to remember that business casual is the suggested attire. In addition to its convenient take-out offerings, the restaurant even provides catering for events around town. A good option in Southfield, a trip to Alpha Fresh Choice Cafe and Deli is definitely worthwhile.</p>
+<p><strong>Don't belive us? Click the icon below and see what our satisfied customers had to say!</p>
+<p><a href="https://www.facebook.com/alphafreshchoicecafe/?rf=104924582883929">
+	<img src="C:/Users/malus/Desktop/19Alpha/images/fb.png" alt="google map icon" height="50" width="70"></a>
+    <img src="C:/Users/malus/Desktop/19Alpha/images/alphagif.gif" style="width:100%;max-width:1000px;" class="w3-margin-top w3-image">
+    <p><strong>Opening hours:</strong> 7:30am to 4pm, Monday through Friday</p>
+    <p><strong>Address:</strong> 25800 Northwestern Hwy Ste L - 10, Southfield, MI 48075</p>
+    <p><strong>Click the icon for Directions</p>
+    <p><a href="https://www.google.com/maps/place/25800+Northwestern+Hwy,+Southfield,+MI+48075/@42.4783797,-83.2501984,17z/data=!3m1!4b1!4m5!3m4!1s0x8824c8288b14e617:0xc31a2bbcbb634759!8m2!3d42.4783758!4d-83.2480097">
+	<img src="C:/Users/malus/Desktop/19Alpha/images/icon.png" alt="google map icon" height="50" width="50"></a>
+    </p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+<div class="w3-content" style="max-width:700px">
+ <br>
+<br>
+    <h5 class="w3-center"><span class="w3-tag w3-wide">THE MENU</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Breakfast Eats');" id="myLink">
+        <div class="w3-col s6 tablink w3-text-white">Breakfast Eats</div>
+      </a>
+      
+	<a href="javascript:void(0)" onclick="openMenu(event, 'Deli Eats');" id="myLink">
+        <div class="w3-col s6 tablink w3-text-white">Deli Eats</div>
+      </a>
+	<a href="javascript:void(0)" onclick="openMenu(event, 'Sides, Soups & Salads');" id="myLink">
+        <div class="w3-col s6 tablink w3-text-white">Sides, Soups & Salads</div>
+      </a>
+	<a href="javascript:void(0)" onclick="openMenu(event, 'Beverages');" id="myLink">
+        <div class="w3-col s6 tablink w3-text-white">Beverages</div>
+      </a>
+    </div>
+
+<div id="Breakfast Eats" class="w3-container menu w3-padding-48 w3-card" style="display: none;">
+    <h5 class="w3-text-white">Two Eggs . . . 4.45</h5>
+		<p class="w3-text-grey">served with toast, hash browns, bacon or sausage 		</p>
+	<h5 class="w3-text-white">Two Eggs Any Style . . . 3.45</h5>
+		<p class="w3-text-grey">served with toast, bacon or sausage </p> 
+	<h5 class="w3-text-white">Two Eggs Any Style . . . 3.45</h5>
+		<p class="w3-text-grey">served with toast and hash browns </p>
+   	<h5 class="w3-text-white">Breakfast Pita . . . 4.25</h5>
+		<p class="w3-text-grey">two eggs, hash browns, sausage or bacon w/ 		cheese</p>
+	<h5 class="w3-text-white">Breakfast Bagel . . . 3.50</h5>
+		<p class="w3-text-grey">one egg, sausage or bacon w/ cheese </p>
+	<h5 class="w3-text-white">One Egg Sandwich . . . 1.85</h5>
+		<p class="w3-text-grey"> add cheese for 2.35 and meat for 3.25 </p>
+	<h5 class="w3-text-white">Western Omelet . . . 4.70</h5>
+		<p class="w3-text-grey">ham, green pepper, onion w/cheese </p>
+	<h5 class="w3-text-white">Veggie or Egg White Omelet . . . 4.70</h5>
+		<p class="w3-text-grey">tomato, green pepper, onion and mushroom w/cheese 	</p>
+	
+	<h5 class="w3-text-white">Omelets</h5>
+		<p class="w3-text-grey">Cheese Omelet . . . 3.95 </p>
+		<p class="w3-text-grey">Ham, Sausage or Bacon Omelet . . . 4.70 </p>
+		<p class="w3-text-grey">Greek Feta Omelet . . . 4.70 </p>
+		<p class="w3-text-grey">Breakfast BLT . . . 3.25 </p>	
+	
+	<h5 class="w3-text-white">Sides</h5>
+		<p class="w3-text-grey">Toast/Pita fold . . . 0.94 </p>
+		<p class="w3-text-grey">Muffins . . . 1.50 </p>
+		<p class="w3-text-grey">Hash Browns . . . 1.75 </p>
+		<p class="w3-text-grey">Hash Browns Combo. . . 1.50 </p>
+		<p class="w3-text-grey">Bagel . . . 1.50 </p>
+		<p class="w3-text-grey">Cream Cheese/Cheese . . . 0.60 ea. </p>
+		<p class="w3-text-grey">Ham . . . 1.80 </p>
+		<p class="w3-text-grey">Bacon (3 pc.) . . . 1.80 </p>
+		<p class="w3-text-grey">Sausage (3 pc.) . . . 1.80 </p>
+		<p class="w3-text-grey">Bacon/Sausage . . . 0.60 ea. </p>
+		<p class="w3-text-grey">Egg . . . 0.94 </p>
+    </div>
+
+<div id="Deli Eats" class="w3-container menu w3-padding-48 w3-card">
+    <h5 class="w3-text-white">Hot Lunch . . . 6.50 . . . 1/2 order . . . 4.25</h5>
+		<p class="w3-text-grey">fresh daily special entrees</p>
+	<h5 class="w3-text-white">Tuna or Chicken Salad Melt . . . 4.95</h5>
+	<h5 class="w3-text-white">Turkey Reuben . . . 5.25</h5>
+		<p class="w3-text-grey">turkey, cole slaw, 1000 Island dressing, w/ swiss cheese on rye bread</p>
+   	<h5 class="w3-text-white">Grilled Cheese w/ Bacon . . . 4.95</h5>
+	<h5 class="w3-text-white">Grilled Cheese . . . 2.95</h5>      
+		<p class="w3-text-grey">w/ chips . . . 3.45</p>
+	<h5 class="w3-text-white">Grilled Chicken Breast Sandwich . . . 5.25</h5>  
+		<p class="w3-text-grey">lettuce, tomato, mayo</p>
+	<h5 class="w3-text-white">Philly Steak and Cheese Sandwich . . . 5.25</h5>  	<p class="w3-text-grey">mushroom, green pepper, onion w/ swiss cheese</p>
+	<h5 class="w3-text-white">Chicken Shawarma Sandwich . . . 4.95</h5>
+		<p class="w3-text-grey">grilled chicken, lettuce, tomato, pickle w/ garlic sauce</p>
+	<h5 class="w3-text-white">Falafel Sandwich . . . 4.95</h5>
+		<p class="w3-text-grey">lettuce, tomato, pickle w/ tahini sauce</p>
+	<h5 class="w3-text-white">Fish Sandwich . . . 4.95</h5> 	
+	<h5 class="w3-text-white">Gyro Pita . . . 5.50</h5>
+	<h5 class="w3-text-white">Chicken Tender Pita . . . 5.50</h5>
+		<p class="w3-text-grey">lettuce, tomato, swiss and American cheese w/ ranch or mayo</p>
+	<h5 class="w3-text-white">Chicken Greek Pita . . . 5.50</h5>
+		<p class="w3-text-grey">grilled chicken, lettuce, tomato, feta cheese w/ greek dressing</p>
+	<h5 class="w3-text-white">Coney Hot Dog . . . 2.50</h5>
+		<p class="w3-text-grey">topped w/ chili, mustard, onion</p>
+	<h5 class="w3-text-white">Hot Dog . . . 1.95</h5>
+		<p class="w3-text-grey">topped w/ mustard and onion</p>
+
+	<h5 class="w3-text-white">Hamburger . . . 3.95</h5>
+		<p class="w3-text-grey">lettuce, tomato, pickle</p>
+	<h5 class="w3-text-white">Cheeseburger . . . 4.50</h5>
+		<p class="w3-text-grey">lettuce, tomato, pickle w/ American or Swiss cheese</p>
+	<h5 class="w3-text-white">Bacon Cheeseburger . . . 5.25</h5>
+		<p class="w3-text-grey">lettuce, tomato, pickle, bacon w/ American or Swiss cheese</p>
+	<h5 class="w3-text-white">Mushroom Swiss Burger . . . 4.95</h5>
+		<p class="w3-text-grey">lettuce, tomato, pickle, mushroom w/ Swiss cheese</p>
+	<h5 class="w3-text-white">Patty Melt . . . 4.95</h5>
+		<p class="w3-text-grey">hamburger patty w/ Swiss cheese, sauteed onion on grilled rye</p>
+	<h5 class="w3-text-white">Veggie Burger . . . 4.95</h5>
+		<p class="w3-text-grey">all natural meatless burger, lettuce, tomato, pickle</p>
+
+	<h5 class="w3-text-white">Deli Sandwiches - add chips/pretzels for .50</h5>
+		<p class="w3-text-grey">Turkey Breast . . . 4.50</p>
+		<p class="w3-text-grey">Ham and Cheese . . . 4.50</p>
+		<p class="w3-text-grey">BLT . . . 4.50</p>
+		<p class="w3-text-grey">Chicken Salad . . . 4.50</p>
+		<p class="w3-text-grey">Tuna Salad . . . 4.50</p>
+		<p class="w3-text-grey">Egg Salad . . . 4.50</p>
+		<p class="w3-text-grey">Vegetarian Sandwich . . . 4.50</p>
+		<p class="w3-text-grey">Turkey Bacon Club . . . 5.50</p>
+    </div>
+
+<div id="Sides, Soups & Salads" class="w3-container menu w3-padding-48 w3-card">
+    <h5 class="w3-text-white">French Fries . . . 1.95</h5>
+	<h5 class="w3-text-white">Chili Fries . . . 2.95</h5>
+	<h5 class="w3-text-white">Chili Fries w/ cheese . . . 3.50</h5>
+		<p class="w3-text-grey">full . . . 6.00 </p>
+	<h5 class="w3-text-white">Cheese Fries . . . 2.50</h5> 
+	<h5 class="w3-text-white">Onion Rings . . . 2.60</h5>      
+	<h5 class="w3-text-white">Onion Rings Combo . . . 2.25</h5> 
+	<h5 class="w3-text-white">Rice Pilaf . . . 1.95</h5> 
+	<h5 class="w3-text-white">Chicken Tenders . . . 4.65</h5> 
+	<h5 class="w3-text-white">Chicken Wings . . . 4.65</h5> 
+	<h5 class="w3-text-white">Scoop Chicken/Tuna/Egg Salad . . . 3.50</h5> 
+	<h5 class="w3-text-white">Regular Hummus . . . 2.85</h5> 
+	<h5 class="w3-text-white">Cilantro or Spicy Hummus . . . 3.25</h5> 
+	<h5 class="w3-text-white">Garlic Sauce or Hummus (2 oz.) . . . .75</h5> 
+	
+	<h5 class="w3-text-white">Soup</h5>
+     	<p class="w3-text-grey">8 oz. . . . 2.25 </p>
+		<p class="w3-text-grey">8 oz. Combo . . . 2.25 </p>
+		<p class="w3-text-grey">12 oz. . . . 2.95 </p>
+		<p class="w3-text-grey">13 oz. Combo . . . 2.60 </p>
+		<p class="w3-text-grey">16 oz. . . . 3.40 </p>
+		<p class="w3-text-grey">16 oz. Combo . . . 2.95 </p>
+	
+	<h5 class="w3-text-white">Salad</h5>
+     	<p class="w3-text-grey">per pound (lb.) . . . 6.72</p>
+		<p class="w3-text-grey">Combo . . . 5.76</p>	
+    </div>
+
+<div id="Beverages" class="w3-container menu w3-padding-48 w3-card">
+    <h5 class="w3-text-white">Fountain Drink</h5> 
+		<p class="w3-text-grey">20 oz. . . . 1.25 </p>
+		<p class="w3-text-grey">32 oz. . . . 1.75 </p>
+	<h5 class="w3-text-white">Coffee</h5> 
+		<p class="w3-text-grey">12 oz. . . . 1.25 </p>
+		<p class="w3-text-grey">16 oz. . . . 1.50 </p>
+	<h5 class="w3-text-white">Hot Chocolate 12 oz. . . . 1.50</h5>
+	<h5 class="w3-text-white">Cappuccino 16 oz. . . . 1.75</h5>
+   </div>
+<br>
+<div class="w3-center">
+	<a href="https://www.grubhub.com/restaurant/alpha-fresh-choice-25800-northwestern-hwy-ste-l-10-southfield/1013080?classicAffiliateId=%2Fr%2Fw%2F98599%2F&amp;utm_source=content-cms.grubhub.com&amp;utm_medium=OOL&amp;utm_campaign=order%20online&amp;utm_content=1013080">
+	 <img src="C:/Users/malus/Desktop/19Alpha/images/grubHub.png" class="w3-center" height="auto" width="auto"></a>
+</div>
+
+<div class="w3-center">
+	<a href="https://www.doordash.com/store/alpha-fresh-choice-cafe-southfield-529916/">
+	 <img src="C:/Users/malus/Desktop/19Alpha/images/doordash.png" class="w3-center" height="20%" width="40%"></a>
+</div>
+</div>
+</div>
+
+<!-- Catering Container -->
+<div class="w3-container" id="catering" >
+<div class="w3-content" style="max-width:700px">
+<br>
+<br>
+    <h5 class="w3-center"><span class="w3-tag w3-wide">CATERING</span></h5>
+	<p class ="w3-text-white w3-center">To learn more about the serving sizes and other catering information, please call:</p>
+	<h5 class ="w3-text-white w3-center"><a href="tel:248-925-7769"> (248) 925-7769</a> or <a href="tel:313-971-3546">(313)971-3546</a></h5>
+	
+	<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Snacks and Appetizers')" id="defaultOpen"><div class="w3-text-white">Snacks and Appetizers</button>
+  <button class="tablinks" onclick="openCity(event, 'Main Dishes and Sides')"><div class="w3-text-white">Main Dishes and Sides</button>
+  <button class="tablinks" onclick="openCity(event, 'Desserts and Platters')"><div class="w3-text-white">Desserts and Platters</button>
+</div>
+	
+	<!-- <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openCMenu(event, 'Snacks and Appetizers');" id="myCLink">
+        <div class="w3-col s6 tablink w3-text-white">Snacks and Appetizers</div>
+      </a>
+      
+	<a href="javascript:void(0)" onclick="openCMenu(event, 'Main Dishes and Sides');" id="myCLink">
+        <div class="w3-col s6 tablink w3-text-white">Main Dishes and Sides</div>
+      </a>
+	<a href="javascript:void(0)" onclick="openCMenu(event, 'Desserts and Platters');" id="myCLink">
+        <div class="w3-col s6 tablink w3-text-white">Desserts and Platters</div>
+      </a>
+    </div> -->
+
+<div id="Snacks and Appetizers" class="tabcontent">
+    <h5 class="w3-text-white">CHICKEN 65</h5>
+		<p class="w3-text-grey">Cubes of boneless chicken marinated with ground ginger, 
+		coriander, garlic ,chillies, mustard seeds and curry leaves</p>
+	<h5 class="w3-text-white">CHILLI CHICKEN</h5>
+		<p class="w3-text-grey">Chilli chicken is a popular Indo-Chinese dish of chicken</p> 
+	<h5 class="w3-text-white">MURGH TANDOORI - HALF</h5>
+		<p class="w3-text-grey">Skinless chicken marinated in yogurt, ginger, garlic and 
+		flavored with freshly ground  spices baked in Tandoor</p>
+   	<h5 class="w3-text-white">MURGH TIKKA</h5>
+		<p class="w3-text-grey">Succulent boneless pieces of chicken marinated in yogurt, 
+		garlic, ginger flavored with freshly ground  blended spices 
+		baked to perfection in tandoor</p>
+	<h5 class="w3-text-white">CHILLY BEEF - BEEF DRY FRY (BDF)</h5>
+		<p class="w3-text-grey">BDF is a very nice snack, especially for parties. 
+		Beef is cut thin slices and marinated with spices 
+		and corn flour and deep fried </p>
+	<h5 class="w3-text-white">BEEF ULARTHIYATHU/BEEF ROAST</h5>
+		<p class="w3-text-grey"> Slow Roasted Beef in a Spicy Aromatic Masala with 
+		Coconut bites and Curry leaves</p>
+	<h5 class="w3-text-white">DEVILED EGGS</h5>
+		<p class="w3-text-grey">A great start or accompaniment to any event</p>
+	<h5 class="w3-text-white">MEAT AND CHEESE DELIGHT</h5>
+		<p class="w3-text-grey">A variety of bite-sized cheeses plus cubes of ham, 
+		salami and turkey</p>
+	<h5 class="w3-text-white">MEATBALLS</h5>
+		<p class="w3-text-grey">Meatballs toped with Swedish sauce</p>
+	<h5 class="w3-text-white">BUFFALO WINGS</h5>
+		<p class="w3-text-grey">Fried to a golden brown, these wings are 
+		served with barbecue sauce</p>
+	<h5 class="w3-text-white">VEGETABLE PLATTER</h5>
+		<p class="w3-text-grey">Broccoli, cauliflower, cucumber slices, cherry tomatoes, 
+		celery and carrot sticks</p>	
+	<h5 class="w3-text-white">CUTLETS, PUFFS, OR SPRING ROLLS</h5>
+		<p class="w3-text-grey">Beef, Chicken, Fish or Vegetable</p>
+	<h5 class="w3-text-white">KABOBS</h5>
+		<p class="w3-text-grey">A dish of pieces of meat, fish, or vegetables roasted or 
+		grilled on a skewer or spit</p>
+	<h5 class="w3-text-white">CHICKEN WINGS</h5>
+	<h5 class="w3-text-white">PALAPPAM</h5>
+		<p class="w3-text-grey">Palappam is a type of laced appam made with 
+		fermented rice batter and coconut milk</p>
+	<h5 class="w3-text-white">KALLAAPPAM / VELLAYAPPAM</h5>
+		<p class="w3-text-grey">Appam type of pancake made with fermented rice 
+		batter and coconutkallu(toddy). We also call this 
+		appam as 'vellayappam</p>
+	<h5 class="w3-text-white">STEW and/or KORMA</h5>
+		<p class="w3-text-grey">Lamb, Beef, Chicken or Vegetable</p>
+	<h5 class="w3-text-white">BUTTER CHICKEN</h5>
+	<h5 class="w3-text-white">DUCK CURRY</h5>
+	<h5 class="w3-text-white">FISH MOLLY</h5>
+	<h5 class="w3-text-white">ALOO PARATHA</h5>
+	<h5 class="w3-text-white">NAAN</h5>
+	<h5 class="w3-text-white">KERALA POROTA</h5>
+	<h5 class="w3-text-white">SAMOSA</h5>
+	<h5 class="w3-text-white">CHAPATHI</h5>
+	<h5 class="w3-text-white">PURI</h5>
+	<h5 class="w3-text-white">KAPPA VEVICHATHU</h5>
+		<p class="w3-text-grey">Boiled Tapioca with Kanthari Mulaku Chammanthi</p>
+	<h5 class="w3-text-white">KAPPA PUZHUKKU</h5>
+	<h5 class="w3-text-white">KAPPA BIRIYANI</h5>
+		<p class="w3-text-grey">Beef or Pork</p>
+	<h5 class="w3-text-white">BANANA FRY</h5>
+	<h5 class="w3-text-white">PARIPPU VADA</h5>
+	<h5 class="w3-text-white">SPRING ONION</h5>
+	<h5 class="w3-text-white">SHAWARMA</h5>
+		<p class="w3-text-grey">Lamb, Chicken, Beef</p>
+	<h5 class="w3-text-white">HUMMUS</h5>
+	<h5 class="w3-text-white">FETA SALAD</h5>
+	<h5 class="w3-text-white">TABOULEH SALAD </h5>
+	<h5 class="w3-text-white">SPINACH PIES</h5>
+	<h5 class="w3-text-white">BUTTERFLY SHRIMP</h5>
+	<h5 class="w3-text-white">SHRIMP COCKTAIL</h5>
+	<h5 class="w3-text-white">CHICKEN DRUMSTICK FRY</h5>
+	<h5 class="w3-text-white">FISH FINGERS</h5>
+	<h5 class="w3-text-white">FISH FRY</h5>
+	
+    </div>
+
+<div id="Main Dishes and Sides" class="tabcontent">
+    <h5 class="w3-text-white">CHICKEN BIRYANI</h5>
+		<p class="w3-text-grey">Aromatic long grain rice cooked with marinated chicken,  
+		dry mixed fruits, nuts, carefully blended herbs and spices</p>
+	<h5 class="w3-text-white">MUTTON BIRIYANI</h5>
+		<p class="w3-text-grey">Aromatic long grain rice cooked with fresh tender cubes 
+		of mutton, dry mixed fruits, nuts and  fragrant saffron</p> 
+	<h5 class="w3-text-white">VEGETARIAN BIRIYANI</h5>
+		<p class="w3-text-grey">Aromatic long grain rice cooked with fresh vegetables, 
+		dry mixed fruits, nuts and saffron</p>
+   	<h5 class="w3-text-white">SHRIMP BIRIYANI</h5>
+		<p class="w3-text-grey">Aromatic long grain rice cooked with shrimps, 
+		dry mixed fruits, nuts and saffron</p>
+	<h5 class="w3-text-white">FISH BIRIYANI</h5>
+		<p class="w3-text-grey">Salmon or Catfish</p>
+	<h5 class="w3-text-white">FRIED RICE PULAV</h5>
+		<p class="w3-text-grey">Aromatic long grain Basmati rice cooked with 
+		vegetables, eggs and spices</p>
+	<h5 class="w3-text-white">RICE PILAF</h5>
+		<p class="w3-text-grey">Rice Pilaf is made with vermicelli noodles toasted in clarified (rendered) butter</p>
+	<h5 class="w3-text-white">CHICKEN CURRY</h5>
+		<p class="w3-text-grey">Skinless chicken cooked in freshly ground and 
+		blended spices</p>
+	<h5 class="w3-text-white">CHICKEN CHETTINADU</h5>
+		<p class="w3-text-grey">Stir fried chicken masala with spices</p>
+	<h5 class="w3-text-white">CHICKEN TIKKA MASALA</h5>
+		<p class="w3-text-grey">Tender pieces of boneless chicken are first cooked
+		in tandoor oven and then simmered in a  piquant sauce
+		made from ginger, garlic and coriander leaves</p>
+	<h5 class="w3-text-white">CHICKEN VINDALOO</h5>
+		<p class="w3-text-grey">Very highly spiced chicken cooked with potatoes in a
+		sharp tangy sauce</p>
+	<h5 class="w3-text-white">GOAT CURRY</h5>
+		<p class="w3-text-grey">Tender goat cubes flavored with spices in a medium gravy</p>
+		
+	<h5 class="w3-text-white">MADRAS PRAWNS</h5>
+		<p class="w3-text-grey">A deliciously stir -fried shrimp, sauteed with fresh 
+		tomatoes, cumin, coriander, ginger, garlic,  and spring 
+		onions and curry leaves</p>
+	<h5 class="w3-text-white">SHRIMP (Jumbo shrimp) GOAN CURRY (Mild)</h5>
+		<p class="w3-text-grey">Jumbo shrimps gently simmered in coconut milk 
+		blended with garlic and ginger - mildly </p>
+	<h5 class="w3-text-white">SHRIMP-DO-PIAZA</h5>
+		<p class="w3-text-grey">A classical Indian recipe in which onions are used 
+		twice in the cooking process. Jumbo shrimps are 
+		sauteed in onion paste and carefully blended with 
+		spices and then garnished with seasoned onion</p>
+	<h5 class="w3-text-white">CHANA MASALA</h5>
+		<p class="w3-text-grey">Chick peas cooked in spices with a little gravy</p>
+	<h5 class="w3-text-white">PANEER MUTTER</h5>
+		<p class="w3-text-grey">Fresh home style cottage cheese cooked gently with 
+		garden fresh peas and blended with spices</p>
+	<h5 class="w3-text-white">VEGETABLE KORMA</h5>
+		<p class="w3-text-grey">Mixed Vegetables mainly carrot, green peas, potato, 
+		cooked in cocunut milk based sauce as curry</p>
+	<h5 class="w3-text-white">VEGETABLE CURRY</h5>
+		<p class="w3-text-grey">Mixed Vegetables mainly carrot, green peas, potato, 
+		cooked with tomatoes, onion ginger garlic and souted 
+		with Indian garma spices</p>
+	<h5 class="w3-text-white">THORAN</h5>
+	<h5 class="w3-text-white">AVIYAL</h5>
+	<h5 class="w3-text-white">SAMBAR</h5>
+	<h5 class="w3-text-white">MORU</h5>
+	<h5 class="w3-text-white">ERISSERY</h5>
+	<h5 class="w3-text-white">RASAM</h5>
+	<h5 class="w3-text-white">CHUTNEY</h5>
+	<h5 class="w3-text-white">PACHADI</h5>
+	<h5 class="w3-text-white">PICKLE</h5>
+	
+	<h5 class="w3-text-white">WRAPS PLATTER</h5>
+		<p class="w3-text-grey">Easy to serve and fun to eat, wraps are ideal for parties 
+		and lunchtime meetings, Choose a variety of sandwiches rolled into pitas</p>
+	<h5 class="w3-text-white">CLASSIC MEAT AND CHEESE TRAY</h5>
+		<p class="w3-text-grey">Your choice of premium meats, cheeses, and salad 
+		to be enjoyed by your guests</p>
+	<h5 class="w3-text-white">SANDWICH TRAY</h5>
+		<p class="w3-text-grey">A tray of convenient, made-fresh sandwiches. Ham, 
+		roast beef, and turkey are paired with sliced deli  
+		cheeses and white and wheat bread. Garnished 
+		with cherry tomatoes</p>
+	<h5 class="w3-text-white">GYRO PITA</h5>
+		<p class="w3-text-grey">The gyro is a Greek dish and usually uses pork or lamb.
+		Seasoned with a blend of oregano, rosemary, thyme 
+		and marjoram, and is ground down and made into a loaf. 
+		The garnishes comprise tomatoes, onion and tzatziki 
+		sauce, a garlic yogurt seasoned with cucumbers and dill</p>
+	<h5 class="w3-text-white">CHICKEN TENDER PITA </h5>
+		<p class="w3-text-grey">lettuce, tomato, swiss and American cheese
+		w/ ranch or mayo</p>
+	<h5 class="w3-text-white">CHICKEN GREEK PITA</h5>
+		<p class="w3-text-grey">grilled chicken breast, lettuce, tomato,
+		feta cheese w/ greek dressing</p>
+	<h5 class="w3-text-white">CHICKEN SHAWARMA WRAP </h5>
+		<p class="w3-text-grey">Sliced chicken thigh marinated with our special 
+		seasonings, nicely grilled with bay leaves, served 
+		with garlic sauce</p>
+	<h5 class="w3-text-white">BEEF SHAWARMA WRAP</h5>
+		<p class="w3-text-grey">Thinly sliced top sirloin steak, marinated with over 
+		10 different spices, nicely flavored, served with tahini 
+		sauce and sautéed onions</p>
+</div>
+	
+<div id="Desserts and Platters" class="tabcontent">
+    <h5 class="w3-text-white">COMING SOON!</h5>
+</div>
+
+</div>
+</div>
+
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-small w3-large">
+	<P>Copyright © 2017 Alpha Fresh Choice Inc.</p>
+  <p>Powered by <a href="mailto:alphafreshchoice@gmail.com">alphafreshchoice@gmail.com</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+// Tabbed Menu
+function openCMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("catering");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+</body>
+</html>
